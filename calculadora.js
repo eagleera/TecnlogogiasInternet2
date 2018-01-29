@@ -17,6 +17,8 @@ if(args.length==3){
         case 'entre':
             console.log("División: "+(Number(num1) / Number(num2)));
             break;
+        default:
+            console.log("Ponga una operacion basica como mas, menos, entre y por.");
     }
 }else{
     console.log("Introduce bien los parámetros");
