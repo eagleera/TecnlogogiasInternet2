@@ -1,3 +1,4 @@
+"use strict";
 var args = process.argv.slice(2);
 var num1 = args[0]
 var operator = args[1]
