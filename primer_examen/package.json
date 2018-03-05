@@ -1,0 +1,16 @@
+{
+  "name": "primer_examen",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "description": "examen primer parcial de romo",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.15.1"
+  },
+  "devDependencies": {},
+  "author": "Daniel Aguilera",
+  "license": "ISC"
+}
