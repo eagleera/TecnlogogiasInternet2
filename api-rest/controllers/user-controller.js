@@ -21,7 +21,14 @@ function createUser(req,res){
 
 function readUser(req, res){
     User.find({}, function (err, posts) {
-        res.status(200).send({users: posts});
+        if(err){
+            res.status(500).send({message:"error al devolver los usuarios"})
+        }
+        if(!posts){
+            res.status(404).send({message:"error tuyo"})
+        }
+        console.log(posts);
+        res.render('index', {title: "Titulo del tab", usuarios: posts})
     });
 }
 

@@ -3,7 +3,7 @@
 var app = require('./app');
 const mongoose = require('mongoose');
 
-var port = process.env.port || 3000;
+var port = process.env.port || 4000;
 
 mongoose.connect('mongodb://localhost:27017/api_rest', (err,res) => {
     if(err){

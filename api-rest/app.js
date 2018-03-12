@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 var path = require('path');
 //todas las rutas van aqui
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
+
 app.use('/api', api);
 app.get("/homepage", (req, res) => {
     res.render("homepage",{
@@ -22,8 +25,8 @@ app.get("/homepage", (req, res) => {
 });
 });
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/index.html'));
-});
+// app.get('/', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/views/index.html'));
+// });
 
 module.exports = app;
