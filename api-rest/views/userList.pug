@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    .card.col-sm-10
+        .card-body
+            .col-lg-12
+                table.table
+                    thead.thead-light
+                        tr
+                            th Nombre
+                            th Direccion
+                            th Telefono
+                            th Activo
+                            th(colspan="3")
+                                a.btn.btn-link(href="./insert/") Agregar
+                    tbody
+                        each val in usuarios
+                            tr
+                                td #{val.nombre}
+                                td #{val.direccion}
+                                td #{val.telefono}
+                                if(val.activo==null || val.activo==0 || val.activo==false)
+                                    td No
+                                else
+                                    td Si
+                                td
+                                    a.btn.btn-info(href="./update/"+val._id) Editar
+                                td
+                                    a.btn.btn-danger(href="./delete/"+val._id) Eliminar

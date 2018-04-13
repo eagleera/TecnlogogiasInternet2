@@ -1,8 +1,7 @@
 body{
+    background-color: #EAE2DA !important;
 }
 
-
-.row .col-lg-6{
-    background-color: pink;
-    margin: 0 auto;
+.card{
+    margin: 10px auto
 }

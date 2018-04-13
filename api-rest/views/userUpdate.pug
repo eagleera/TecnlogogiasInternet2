@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .card.col-sm-10
+        .card-body
+            .col-lg-12
+                form(method="post")
+                    h2 Actualizar
+                    .form-group
+                        label(for='exampleInputEmail1') Nombre
+                        input#exampleInputEmail1.form-control(type='text', aria-describedby='emailHelp', placeholder='', value=usuarios.nombre, name="nombre")
+                    .form-group
+                        label(for='exampleInputPassword1') Direccion
+                        input#exampleInputPassword1.form-control(type='text', placeholder='Password', value=usuarios.direccion, name="direccion")
+                    .form-group
+                        label(for='exampleInputPassword1') Telefono
+                        input#exampleInputPassword2.form-control(type='text', placeholder='Password', value=usuarios.telefono, name="telefono")
+                    .form-check
+                        if(usuarios.activo == true)
+                            input#exampleCheck1.form-check-input(type='checkbox', name="activo", checked, value='true')
+                        else
+                            input#exampleCheck1.form-check-input(type='checkbox', name="activo", value='true')
+                        label.form-check-label(for='exampleCheck1') Activo
+                    br
+                    button.btn.btn-primary(type='submit') Actualizar
